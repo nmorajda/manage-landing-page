@@ -1,0 +1,89 @@
+.cta {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    background-color: $primary;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        top: 0;
+        left: 0;
+        transform: translate(-500px, 10%);
+        opacity: 0.1;
+        background-image: url('../images/bg-tablet-pattern.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        @include breakpoint(md) {
+            left:50%;
+            transform: translate(-620px, -20px);
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        top: 0;
+        right: 0;
+        transform: translate(200px,-440px);
+        opacity: 0;
+        background-image: url('../images/bg-tablet-pattern.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+
+        @include breakpoint(md) {
+            opacity: 0.1;
+        }
+    }    
+
+
+
+
+    @include breakpoint(md) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    &__container {
+        z-index: 2;
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__text__wrapper {
+        color: $white;
+        flex: 1;
+
+    }
+    
+    &__button__wrapper {
+
+
+    }
+    
+
+    &__heading {
+        max-width: 44rem;
+        margin: 0 auto 3rem auto;
+        font-size: 3.6rem;
+
+        @include breakpoint(md) {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    &__btn {
+        min-width: 14.5rem;
+    }
+}

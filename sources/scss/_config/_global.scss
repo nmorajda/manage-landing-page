@@ -1,0 +1,130 @@
+$breakpoints: (
+    xs: 480px,
+    sm: 640px, 
+    md: 800px, 
+    lg: 1024px,
+    xlg: 1200px
+);
+
+$breakpoint: 800px;
+$container-max-width: 115.8rem;
+$gap: 2.4rem;
+
+// project colors
+$lime-green: hsl(136, 65%, 51%);
+$dark-blue: hsl(233, 26%, 24%);
+$bright-cyan: hsl(192, 70%, 51%);
+
+$grayish-blue: hsl(233, 8%, 62%);
+$light-grayish-blue: hsl(220, 16%, 96%);
+$very-light-gray: hsl(0, 0%, 98%);
+
+$bright-red: hsl(12, 88%, 59%);
+$dark-blue: hsl(228, 39%, 23%);
+$dark-grayish-blue: hsl(227, 12%, 61%);
+$very-dark-blue: hsl(233, 12%, 13%);
+$very-pale-red: hsl(13, 100%, 96%);
+$vary-light-gray: hsl(0, 0%, 98%);
+
+// colors
+$red: $bright-red;
+$red-light: #F98F75;
+$red-very-light: $very-pale-red;
+$blue-dark: $very-dark-blue; 
+$blue: $dark-blue;
+$blue-light: lighten($blue, 30);
+
+$green: green;
+$green-light: lighten($green, 30);
+$cyan: cyan;
+$cyan-light: lighten($cyan, 30);
+$grey-dark: #666;
+$grey: $dark-grayish-blue;
+$grey-light: lighten($grey, 30);
+$grey-very-light: $very-light-gray;
+$white: #fff;
+$black: #000;
+
+// functional colors
+$dark: $blue-dark;
+$light: $grey-light;
+$primary: $red;
+$primary-light: $red-light;
+$primary-very-light: $red-very-light;
+$secondary: $blue;
+$secondary-light: $blue-light;
+
+$error: $red;
+$warning: $red;
+$success: $green;
+
+$link-hover-color: $primary;
+
+// gradients
+$linear-gradient-primary: linear-gradient(90deg, $green, $blue);
+$linear-gradient-primary-light: linear-gradient(90deg, lighten($green, 20), lighten($blue, 20));
+
+// typography
+$font-family-primary: 'Be Vietnam', sans-serif;
+$font-family-secondary: 'Be Vietnam', sans-serif;
+$font-size-primary: 1.6rem;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// borders
+$border-color: $grey-light;
+$border-radius-sm: .3rem;
+$border-radius-md: .5rem;
+$border-radius-lg: 1rem;
+
+// shadows
+$boxShadow: 0 0 13px 3px rgba(0, 0, 0, 0.1); // TO DO remove it
+$box-shadow-primary: 0 0 13px 3px rgba(0, 0, 0, 0.1);
+
+// buttons
+$button-primary-box-shadow: 0 10px 13px -3px rgba($primary, 0.5);
+
+
+// Body
+$body-background-color: $white;
+
+// Header
+$header-link-font-family: $font-family-secondary;
+$header-link-font-size: 1.3rem;
+$header-mobile-link-font-size: 1.6rem;
+$header-link-font-weight: $font-weight-medium;
+$header-link-color: $dark;
+$header-link-hover-color: $grey;
+$header-background-color: transparent;
+$header-mobile-link-color: $dark;
+$header-mobile-background-color: $white;
+$header-mobile-box-shadow: $box-shadow-primary;
+
+// button toggle
+$button-toggle-width: 3.5rem;
+$button-toggle-height: 2.8rem;
+$button-toggle-background:transparent;
+$button-toggle-line-width: 2.5rem;
+$button-toggle-line-height: 4px;
+$button-toggle-line-spacing: 7px;
+$button-toggle-line-color: $dark;
+$button-toggle-line-transition: .2s;
+
+// dropdown
+$dropdown-link-font-family: $header-link-font-family;
+$dropdown-link-font-weight: $header-link-font-weight;
+$dropdown-link-hover-color: $dark;
+$dropdown-background-color: $grey-light;
+$dropdown-mobile-background-color: $grey-light;
+$dropdown-box-shadow: $box-shadow-primary;
+
+// Sections
+$section-heading-font-weight: $font-weight-bold;
+$section-heading-color: $dark;
+$section-subheading-color: $grey;
+
+// Footer
+$footer-link-color:  $grey-light;
+$footer-background-color: $dark;

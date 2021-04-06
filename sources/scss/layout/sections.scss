@@ -1,0 +1,60 @@
+.section {
+    position: relative;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    &__header {
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include breakpoint(md) {
+            margin-bottom: 6rem;
+            align-items: flex-start;
+        }
+    }
+
+    &__heading {
+        margin-bottom: 2rem;
+        font-size: 2.4rem;
+        line-height: 1.4;
+        color: $section-heading-color;
+        font-weight: $section-heading-font-weight;
+
+        @media (min-width: $breakpoint)
+        {
+            font-size: 3.6rem
+        }
+    }
+
+    &__subheading {
+        max-width: 46rem;
+        margin: 0 auto;
+        font-size: 1.3rem;
+        line-height: 2;
+        color: $section-subheading-color;
+
+        @media (min-width: $breakpoint)
+        {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+    }
+
+    &--inline {
+        .container {
+            @include breakpoint(md) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    
+        .section__header,
+        .section__body {
+            @include breakpoint(md) {
+                flex: 1;
+            }
+        }
+    }
+}

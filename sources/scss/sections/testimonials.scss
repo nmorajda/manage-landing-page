@@ -1,0 +1,89 @@
+.testimonials {
+    padding-top: 0;
+
+    &__container {
+        @include breakpoint(md) {
+            max-width: 144rem;
+            padding-top: 7rem;
+            padding-bottom: 14rem;
+        }
+
+        &:before {
+            @include breakpoint(md) {
+                z-index:-1;
+                content: '';
+                position: absolute;
+                top: -350px;
+                left: -430px;
+                width: 814px;
+                height: 814px;
+                background-color: $body-background-color;
+                background-image: url(../images/bg-tablet-pattern.svg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: right top;
+            }
+        }
+    }
+
+    .section__header {
+        align-items: center;
+    }
+
+    &__button-wrapper {
+        text-align: center;
+    }
+
+    .testimonial {
+
+        @include breakpoint(md) {
+            padding-top: 6.4rem;
+            cursor: pointer;
+            background: #fafafa;
+            border: 2px solid #F9F9F9;
+            border-bottom: none;
+        }
+
+        &__image-wrapper {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include breakpoint(md) {
+                position: absolute;
+                top: -4rem;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            img {
+                width: 8rem;
+            }
+        }
+
+        &__text-wrapper {
+            margin-bottom: 3rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            font-size: 1.3rem;
+            line-height: 2;
+            
+
+            @include breakpoint(md) {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        &__author {
+            margin-bottom: 1rem;
+        }
+
+        &__text {
+            
+            
+            color: $grey;
+        }
+    }
+}

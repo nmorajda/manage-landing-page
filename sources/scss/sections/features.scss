@@ -1,0 +1,100 @@
+.features {
+    counter-set: features;
+    padding-top: 0;
+
+    &__container {
+        @include breakpoint(md) {
+            align-items: flex-start;
+        }
+    }
+
+    &__items {
+        @include breakpoint(md) {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+
+    &__heading {
+        max-width: 20rem;
+
+        @include breakpoint(md) {
+            max-width: initial;
+
+        }
+    }
+
+    &__subheading {
+        max-width: 35rem;
+    }
+
+    .feature {
+        &__item {
+            position: relative;
+            padding: 1.5rem 0;
+        }
+
+        &__heading {
+            margin-right: -$gap; // rozciąga tło do krawędzi przegląrarki
+            margin-bottom: 1rem;
+            padding-right: 3rem;
+            font-size: 1.3rem;
+            font-weight: $font-weight-bold;
+            background: $primary-very-light;
+            border-top-left-radius: 100vh;
+            border-bottom-left-radius: 100vh;
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(md) {
+                font-size: 1.6rem;
+                background: transparent;
+            }
+
+            &__num {
+                min-height: 4rem;
+                min-width: 6rem;
+                margin-right: 1rem;
+                background: $primary;
+                border-radius: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @include breakpoint(md) {
+                    min-width: 6.5rem;
+                    margin-right: 3rem;
+                }
+
+                &:before {
+                    counter-increment: features;
+                    content: '0' counter(features);
+                    color: #fff;
+
+                }
+            }
+
+
+        }
+
+        &__text {
+            max-width: 32rem;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: $grey;
+
+            @include breakpoint(md) {
+                width: 44rem;
+                max-width: initial;
+                margin-left: 10rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+
+}
