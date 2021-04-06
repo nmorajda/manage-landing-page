@@ -1,0 +1,19 @@
+mixin testimonials({ testimonials } = data)
+    section.section.testimonials
+        .container.testimonials__container
+            .section__header
+                h2.section__heading.testimonials__heading #{testimonials.heading}
+            .section__body
+                .swiper-container
+                    .swiper-wrapper
+                        each testimonial in testimonials.items 
+                            .swiper-slide.testimonial
+                                .testimonial__image-wrapper
+                                    img(src=pathToFile+"images/"+testimonial.image, alt=testimonial.author)
+                                .testimonial__text-wrapper
+                                    h3.testimonial__author #{testimonial.author}
+                                    p.testimonial__text #{testimonial.text}
+                    .swiper-pagination
+                .testimonials__button-wrapper 
+                    +button(testimonials.button)
+                        | #{testimonials.button.text}

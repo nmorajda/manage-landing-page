@@ -1,0 +1,35 @@
+mixin footer({brand, menu, footer, socials} = data)
+    footer.footer
+        .container.footer__container
+            .footer__content
+                .footer__cta
+                    form.form.form--inline(action="#") 
+                        .form__field
+                            input(type="text" class="form__control" name="updateInbox" placeholder=footer.input.placeholder)
+                        .form__field
+                            +button(footer.button)
+                                | #{footer.button.text}
+                    .footer__cta__note
+                        p #{footer.note}
+                .footer__menu
+                    div.footer__menu__col
+                        each item in menu.footerMenu1.items
+                            a.footer__menu__link(href=item.attrs.href) 
+                                | #{item.anchor}
+                    div.footer__menu__col
+                        each item in menu.footerMenu2.items
+                            a.footer__menu__link(href=item.attrs.href) 
+                                | #{item.anchor}
+                .footer__brand
+                    .footer__brand__socials
+                        each social in socials
+                            a(href=social.href aria-label=social.name) 
+                                +iconsvg({id: social.id, size: 'is-medium'})
+                    .footer__brand__logo 
+                        +link({attrs: brand.link.attrs})
+                            img(src=pathToFile+'images/logo-light.svg', alt="Logo")
+            .footer__copyright
+                p.attribution !{footer.copyright}
+                p.attribution 
+                    small Last update: #{locals.createDate}
+

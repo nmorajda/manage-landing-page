@@ -1,0 +1,8 @@
+mixin cta({cta} = data)
+    section.cta
+        .container.cta__container
+            .cta__text__wrapper
+                h2.cta__heading #{cta.heading}
+            .cta__button__wrapper
+                +button(cta.button)
+                    | #{cta.button.text}
